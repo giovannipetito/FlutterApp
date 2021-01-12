@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/components/custom_button.dart';
 import 'package:flutter_app/components/reusable_card.dart';
-import 'package:flutter_app/constants.dart';
+import 'package:flutter_app/values/styles.dart';
+import '../values/colors.dart';
 
 class ResultsPage extends StatelessWidget {
 

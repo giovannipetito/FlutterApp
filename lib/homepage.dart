@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/components/custom_button.dart';
+import 'package:flutter_app/components/custom_text_field.dart';
 import 'screens/screen1.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,6 +16,17 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             Column(
               children: <Widget>[
+                SizedBox(
+                  height: 12.0,
+                ),
+                CustomTextField(hint: 'Username', icon: Icon(Icons.account_circle, color: Colors.lightBlueAccent,),),
+                SizedBox(
+                  height: 12.0,
+                ),
+                CustomTextField(hint: 'Password', icon: Icon(Icons.remove_red_eye_rounded, color: Colors.lightBlueAccent,),),
+                SizedBox(
+                  height: 12.0,
+                ),
                 CustomButton(
                   buttonText: 'Go To Screen 1 (push)',
                   onTap: () {

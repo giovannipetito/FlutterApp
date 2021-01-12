@@ -1,0 +1,1 @@
+const kCustomButtonHeight = 48.0;

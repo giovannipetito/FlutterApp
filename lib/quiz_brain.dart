@@ -1,4 +1,5 @@
 import 'question.dart';
+import 'package:flutter_app/values/strings.dart';
 
 class QuizBrain {
 
@@ -6,19 +7,19 @@ class QuizBrain {
 
   List<Question> _questionBank = [
     // Question(question: 'A slug\'s blood is green.', answer: true), // Vale solo se scriviamo il costruttore così: Question({String question, bool answer})
-    Question('A slug\'s blood is green.', true),
-    Question('Some cats are actually allergic to humans', true),
-    Question('Google was originally called \"Backrub\".', true),
-    Question('It is illegal to pee in the Ocean in Portugal.', true),
-    Question('You can lead a cow down stairs but not up stairs.', false),
-    Question('Buzz Aldrin\'s mother\'s maiden name was \"Moon\".', true),
-    Question('Approximately one quarter of human bones are in the feet.', true),
-    Question('No piece of square dry paper can be folded in half more than 7 times.', false),
-    Question('The total surface area of two human lungs is approximately 70 square metres.', true),
-    Question('The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.', false),
-    Question('Chocolate affects a dog\'s heart and nervous system; a few ounces are enough to kill a small dog.', true),
-    Question('In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.', true),
-    Question('In London, UK, if you happen to die in the House of Parliament, you are technically entitled to a state funeral, because the building is considered too sacred a place.', true),
+    Question(question1, true),
+    Question(question2, true),
+    Question(question3, true),
+    Question(question4, true),
+    Question(question5, false),
+    Question(question6, true),
+    Question(question7, true),
+    Question(question8, false),
+    Question(question9, true),
+    Question(question10, false),
+    Question(question11, true),
+    Question(question12, true),
+    Question(question13, true),
   ];
 
   String getQuestionText() {
