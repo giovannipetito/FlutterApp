@@ -9,6 +9,7 @@ import 'screens/screen6.dart';
 import 'screens/screen7.dart';
 import 'screens/screen8.dart';
 import 'screens/screen9.dart';
+import 'screens/screen10.dart';
 
 // The main function is the starting point for all our Flutter apps.
 void main() {
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/screen7': (context) => Screen7(),
         '/screen8': (context) => Screen8(),
         '/screen9': (context) => Screen9(),
+        '/screen10': (context) => Screen10(),
       },
     );
   }

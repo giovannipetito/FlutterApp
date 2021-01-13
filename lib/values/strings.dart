@@ -11,3 +11,20 @@ const question10 = 'The loudest sound produced by any animal is 188 decibels. Th
 const question11 = 'Chocolate affects a dog\'s heart and nervous system; a few ounces are enough to kill a small dog.';
 const question12 = 'In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.';
 const question13 = 'In London, UK, if you happen to die in the House of Parliament, you are technically entitled to a state funeral, because the building is considered too sacred a place.';
+
+// WIND TRE BUSINESS
+
+// BUTTON
+const button_access = 'Accedi';
+const button_sign_in = 'Registrati';
+const button_password_recovery = 'Recupera password';
+
+const w3b = 'WINDTRE BUSINESS';
+const welcome_message = 'Benvenuto nel mondo';
+const access_instructions = 'Accedi come Cliente';
+const enter_username = 'Inserisci username';
+const enter_password = 'Inserisci password';
+const stores_password = 'Memorizza la password';
+const missing_password = 'Non hai una password?';
+const forgot_password = 'Non ricordi la tua password?';
+

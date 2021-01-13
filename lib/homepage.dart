@@ -120,6 +120,15 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: 12.0,
                 ),
+                CustomButton(
+                  buttonText: 'Go To Screen 10',
+                  onTap: () {
+                    Navigator.pushNamed(context, '/screen10');
+                  },
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
               ],
             ),
           ],
