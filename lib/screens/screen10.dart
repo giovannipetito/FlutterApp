@@ -1,289 +1,108 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/values/strings.dart';
-import 'package:flutter_app/components/custom_button.dart';
-import 'package:flutter_app/components/custom_button_empty.dart';
+import 'package:flutter_app/components/facebook_button.dart';
 
 class Screen10 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        accentColor: Colors.white,
-        primaryColor: Colors.black,
-        scaffoldBackgroundColor: Colors.black,
-      ),
-      home: LoginPage(),
-    );
-  }
-}
-
-class LoginPage extends StatefulWidget {
-  @override
-  _LoginPageState createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
-  bool isSwitched = false;
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Column(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Text('Home Page'),
+      ),
+      body: Center(
+        child: ListView(
           children: <Widget>[
-            Row(
+            Column(
               children: <Widget>[
-                Expanded(
-                  child: Container(
-                    margin: EdgeInsets.fromLTRB(24.0, 0.0, 0.0, 0.0),
-                    child: Image(
-                      image: AssetImage('images/logo_w3b.png'),
-                    ),
-                  ),
+                SizedBox(
+                  height: 12.0,
+                ),
+                RaisedButton(
+                  color: Colors.lightBlue,
+                  child: Icon(Icons.add),
+                  onPressed: () {
+                    print("RaisedButton clicked");
+                  },
                 ),
                 SizedBox(
-                  width: 48.0,
+                  height: 12.0,
                 ),
-                Expanded(
-                  child: Container(
-                    margin: EdgeInsets.fromLTRB(0.0, 0.0, 24.0, 0.0),
-                    child: Image(
-                      image: AssetImage('images/logo_w3b_direct.png'),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Container(
-              alignment: Alignment.centerLeft,
-              margin: EdgeInsets.fromLTRB(16.0, 24.0, 0.0, 0.0),
-              child: Text(
-                welcome_message.toUpperCase(),
-                style: TextStyle(
-                  fontSize: 24.0,
-                  color: Colors.white,
-                  fontWeight: FontWeight.normal,
-                  fontFamily: 'Source Sans Pro',
-                ),
-              ),
-            ),
-            Container(
-              alignment: Alignment.centerLeft,
-              margin: EdgeInsets.fromLTRB(16.0, 0.0, 0.0, 0.0),
-              child: Text(
-                w3b,
-                style: TextStyle(
-                  fontSize: 24.0,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Source Sans Pro',
-                ),
-              ),
-            ),
-            Container(
-              alignment: Alignment.centerLeft,
-              margin: EdgeInsets.fromLTRB(16.0, 32.0, 0.0, 0.0),
-              child: Text(
-                access_instructions,
-                style: TextStyle(
-                  fontSize: 18.0,
-                  color: Colors.white,
-                  fontWeight: FontWeight.normal,
-                  fontFamily: 'Source Sans Pro',
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 2.0,
-            ),
-            Container(
-              height: 40.0,
-              margin: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 0.0),
-              child: Row(
-                children: [
-                  Expanded(
-                    flex: 10,
-                    child: Container(
-                      height: 40.0,
-                      padding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 0.0),
-                      alignment: AlignmentDirectional.centerStart,
-                      color: Colors.white,
-                      child: Text(
-                        w3b,
-                        style: TextStyle(
-                          color: Colors.grey,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      height: 40.0,
-                      color: Colors.white,
-                      child: Icon(
-                        Icons.keyboard_arrow_down,
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 8.0,
-            ),
-            Container(
-              height: 40.0,
-              margin: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 0.0),
-              child: TextField(
-                style: TextStyle(
-                  color: Colors.black,
-                ),
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  hintText: enter_username,
-                  hintStyle: TextStyle(
-                    color: Colors.grey,
-                  ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(0.0),
-                    ),
-                    borderSide: BorderSide.none,
-                  ),
-                ),
-                onChanged: (value) {
-                  print(value);
-                },
-                textAlignVertical: TextAlignVertical.bottom,
-              ),
-            ),
-            SizedBox(
-              height: 8.0,
-            ),
-            Container(
-              height: 40.0,
-              margin: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 0.0),
-              child: Row(
-                children: [
-                  Expanded(
-                    flex: 10,
-                    child: TextField(
-                      style: TextStyle(
-                        color: Colors.black,
-                      ),
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        hintText: enter_password,
-                        hintStyle: TextStyle(
-                          color: Colors.grey,
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(0.0),
-                          ),
-                          borderSide: BorderSide.none,
-                        ),
-                      ),
-                      onChanged: (value) {
-                        print(value);
-                      },
-                      textAlignVertical: TextAlignVertical.bottom,
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      height: 40.0,
-                      color: Colors.white,
-                      child: Icon(
-                        Icons.remove_red_eye,
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Row(
-              children: <Widget>[
-                Container(
-                  alignment: Alignment.centerLeft,
-                  margin: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 0.0),
-                  child: Switch(
-                    value: isSwitched,
-                    onChanged: (value) {
-                      setState(() {
-                        isSwitched = value;
-                        print(isSwitched);
-                      });
-                    },
-                    inactiveTrackColor: Colors.grey,
-                    activeTrackColor: Colors.orangeAccent,
-                    activeColor: Colors.orange,
-                  ),
-                ),
-                Container(
-                  alignment: Alignment.centerLeft,
+                RaisedButton(
+                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                  color: Colors.lightBlue[500],
+                  textColor: Colors.red, // Non ha effetto se nel TextStyle è definito il colore.
+                  highlightColor: Colors.indigo,
+                  splashColor: Colors.yellow,
+                  colorBrightness: Brightness.light, // Ha effetto su textColor e splashColor.
+                  elevation: 6,
+                  highlightElevation: 10, // l'ombra si allarga al tap sul button.
+                  disabledColor: Colors.grey,
+                  disabledTextColor: Colors.black,
+                  disabledElevation: 6,
+                  // textTheme: ButtonTextTheme.normal, // Ha effetto su textColor e splashColor.
+                  // textTheme: ButtonTextTheme.accent, // Ha effetto su textColor e splashColor.
+                  // textTheme: ButtonTextTheme.primary, // Ha effetto su textColor e splashColor.
                   child: Text(
-                    stores_password,
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      color: Colors.white,
-                      fontWeight: FontWeight.normal,
-                      fontFamily: 'Source Sans Pro',
-                    ),
+                    "RaisedButton 1",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
+                  shape: StadiumBorder(
+                    side: BorderSide(color: Colors.indigo, width: 2),
+                  ),
+                  onPressed: () {
+                    print("RaisedButton clicked");
+                  },
+                  // onPressed: null, // Per disabilitare il button (e rendere visibili disabledColor e disabledTextColor).
+                  onHighlightChanged: (isHigh) {
+                    print("onHighlightChanged.isHigh = $isHigh");
+                  },
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
+                RaisedButton(
+                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                  color: Colors.lightBlue[500],
+                  textColor: Colors.red, // Non ha effetto se nel TextStyle è definito il colore.
+                  highlightColor: Colors.indigo,
+                  splashColor: Colors.yellow,
+                  colorBrightness: Brightness.light, // Ha effetto su textColor e splashColor.
+                  elevation: 6,
+                  highlightElevation: 10, // l'ombra si allarga al tap sul button.
+                  disabledColor: Colors.grey,
+                  disabledTextColor: Colors.black,
+                  disabledElevation: 6,
+                  // textTheme: ButtonTextTheme.normal, // Ha effetto su textColor e splashColor.
+                  // textTheme: ButtonTextTheme.accent, // Ha effetto su textColor e splashColor.
+                  // textTheme: ButtonTextTheme.primary, // Ha effetto su textColor e splashColor.
+                  child: Text(
+                    "RaisedButton 2",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                  shape: RoundedRectangleBorder(
+                    side: BorderSide(color: Colors.indigo, width: 2),
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  onPressed: () {
+                    print("RaisedButton clicked");
+                  },
+                  // onPressed: null, // Per disabilitare il button (e rendere visibili disabledColor e disabledTextColor).
+                  onHighlightChanged: (isHigh) {
+                    print("onHighlightChanged.isHigh = $isHigh");
+                  },
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
+                FacebookButton(text: 'Continue with Facebook', onPressed: () {}),
+                SizedBox(
+                  height: 12.0,
+                ),
+                FacebookButton(text: 'Continue with Facebook', darkMode: true, onPressed: () {}),
+                SizedBox(
+                  height: 12.0,
                 ),
               ],
-            ),
-            CustomButton(
-              buttonText: button_access.toUpperCase(),
-              onTap: () {
-              },
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            Container(
-              alignment: Alignment.centerLeft,
-              margin: EdgeInsets.fromLTRB(16.0, 0.0, 0.0, 0.0),
-              child: Text(
-                missing_password,
-                style: TextStyle(
-                  fontSize: 18.0,
-                  color: Colors.white,
-                  fontWeight: FontWeight.normal,
-                  fontFamily: 'Source Sans Pro',
-                ),
-              ),
-            ),
-            CustomButtonEmpty(
-              buttonText: button_sign_in.toUpperCase(),
-              onTap: () {
-              },
-            ),
-            Container(
-              alignment: Alignment.centerLeft,
-              margin: EdgeInsets.fromLTRB(16.0, 0.0, 0.0, 0.0),
-              child: Text(
-                forgot_password,
-                style: TextStyle(
-                  fontSize: 18.0,
-                  color: Colors.white,
-                  fontWeight: FontWeight.normal,
-                  fontFamily: 'Source Sans Pro',
-                ),
-              ),
-            ),
-            CustomButtonEmpty(
-              buttonText: button_password_recovery.toUpperCase(),
-              onTap: () {
-              },
             ),
           ],
         ),

@@ -5,19 +5,46 @@ import '../values/colors.dart';
 
 class CustomButton extends StatelessWidget {
 
+  final String text;
+  final bool empty;
   final Function onTap;
-  final String buttonText;
 
-  CustomButton({@required this.onTap, @required this.buttonText});
+  CustomButton({
+    @required this.text,
+    this.empty = false,
+    @required this.onTap
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
+        decoration: BoxDecoration(
+          border: Border(
+            left: BorderSide(
+                color: empty ? Colors.grey : Colors.orange,
+                width: 2,
+                style: BorderStyle.solid),
+            top: BorderSide(
+                color: empty ? Colors.grey : Colors.orange,
+                width: 2,
+                style: BorderStyle.solid),
+            right: BorderSide(
+                color: empty ? Colors.grey : Colors.orange,
+                width: 2,
+                style: BorderStyle.solid),
+            bottom: BorderSide(
+                color: empty ? Colors.grey : Colors.orange,
+                width: 2,
+                style: BorderStyle.solid),
+          ),
+          color: empty ? kCustomButtonEmptyColor : kCustomButtonColor,
+          borderRadius: BorderRadius.circular(24.0),
+        ),
         child: Center(
           child: Text(
-            buttonText.toUpperCase(),
+            text.toUpperCase(),
             style: kCustomButtonTextStyle,
           ),
         ),
@@ -25,10 +52,6 @@ class CustomButton extends StatelessWidget {
         padding: EdgeInsets.all(12.0),
         width: double.infinity,
         height: kCustomButtonHeight,
-        decoration: BoxDecoration(
-          color: kCustomButtonColor,
-          borderRadius: BorderRadius.circular(24.0),
-        ),
       ),
     );
   }

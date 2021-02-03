@@ -204,11 +204,9 @@ class _InputPageState extends State<InputPage> {
             ],
           )),
           CustomButton(
-            buttonText: 'CALCULATE',
+            text: 'CALCULATE',
             onTap: () {
-
               CalculatorBrain calculator = CalculatorBrain(height: height,weight: weight);
-
               /*
               Navigator.push(context, MaterialPageRoute(builder: (context) {
               return ResultsPage();

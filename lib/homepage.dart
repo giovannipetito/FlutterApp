@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/components/custom_button.dart';
 import 'package:flutter_app/components/custom_text_field.dart';
+import 'package:flutter_app/restaurantfinder/UI/restaurant_finder.dart';
+import 'chat/welcome_screen.dart';
 import 'screens/screen1.dart';
 
 class HomePage extends StatelessWidget {
@@ -28,7 +30,7 @@ class HomePage extends StatelessWidget {
                   height: 12.0,
                 ),
                 CustomButton(
-                  buttonText: 'Go To Screen 1 (push)',
+                  text: 'Screen 1 (push)',
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
                       return Screen1();
@@ -39,91 +41,136 @@ class HomePage extends StatelessWidget {
                   height: 12.0,
                 ),
                 CustomButton(
-                  buttonText: 'Go To Screen 1 (pushNamed)',
+                  text: 'Screen 1 (pushNamed)',
                   onTap: () {
                     // Navigate to Screen 1
-                    Navigator.pushNamed(context, '/screen1');
+                    Navigator.pushNamed(context, 'screen1');
                   },
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 CustomButton(
-                  buttonText: 'Go To Screen 2',
+                  text: 'Screen 2',
                   onTap: () {
-                    Navigator.pushNamed(context, '/screen2');
+                    Navigator.pushNamed(context, 'screen2');
                   },
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 CustomButton(
-                  buttonText: 'Go To Screen 3',
+                  text: 'Screen 3',
                   onTap: () {
-                    Navigator.pushNamed(context, '/screen3');
+                    Navigator.pushNamed(context, 'screen3');
                   },
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 CustomButton(
-                  buttonText: 'Go To Screen 4',
+                  text: 'Screen 4',
                   onTap: () {
-                    Navigator.pushNamed(context, '/screen4');
+                    Navigator.pushNamed(context, 'screen4');
                   },
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 CustomButton(
-                  buttonText: 'Go To Screen 5',
+                  text: 'Screen 5',
                   onTap: () {
-                    Navigator.pushNamed(context, '/screen5');
+                    Navigator.pushNamed(context, 'screen5');
                   },
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 CustomButton(
-                  buttonText: 'Go To Screen 6',
+                  text: 'Screen 6',
                   onTap: () {
-                    Navigator.pushNamed(context, '/screen6');
+                    Navigator.pushNamed(context, 'screen6');
                   },
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 CustomButton(
-                  buttonText: 'Go To Screen 7',
+                  text: 'Screen 7',
                   onTap: () {
-                    Navigator.pushNamed(context, '/screen7');
+                    Navigator.pushNamed(context, 'screen7');
                   },
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 CustomButton(
-                  buttonText: 'Go To Screen 8',
+                  text: 'Screen 8',
                   onTap: () {
-                    Navigator.pushNamed(context, '/screen8');
+                    Navigator.pushNamed(context, 'screen8');
                   },
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 CustomButton(
-                  buttonText: 'Go To Screen 9',
+                  text: 'Screen 9',
                   onTap: () {
-                    Navigator.pushNamed(context, '/screen9');
+                    Navigator.pushNamed(context, 'screen9');
                   },
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 CustomButton(
-                  buttonText: 'Go To Screen 10',
+                  text: 'Screen 10',
                   onTap: () {
-                    Navigator.pushNamed(context, '/screen10');
+                    Navigator.pushNamed(context, 'screen10');
+                  },
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
+                CustomButton(
+                  text: 'Screen 11',
+                  onTap: () {
+                    Navigator.pushNamed(context, 'screen11');
+                  },
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
+                CustomButton(
+                  text: 'Meteo',
+                  onTap: () {
+                    Navigator.pushNamed(context, 'meteo_screen');
+                  },
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
+                CustomButton(
+                  text: 'Bitcoin Ticker',
+                  onTap: () {
+                    Navigator.pushNamed(context, 'price_screen');
+                  },
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
+                CustomButton(
+                  text: 'Chat',
+                  onTap: () {
+                    Navigator.pushNamed(context, WelcomeScreen.id);
+                  },
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
+                CustomButton(
+                  text: 'Restaurant Finder',
+                  onTap: () {
+                    Navigator.pushNamed(context, RestaurantFinder.id);
                   },
                 ),
                 SizedBox(
