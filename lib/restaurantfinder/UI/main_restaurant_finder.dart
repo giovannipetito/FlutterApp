@@ -15,7 +15,7 @@ import 'main_screen.dart';
 /// L'aggiunta di widget sopra MaterialApp è un ottimo modo per aggiungere dati
 /// a cui è necessario accedere da più screens.
 
-class RestaurantFinder extends StatelessWidget {
+class MainRestaurantFinder extends StatelessWidget {
 
   static const String id = 'main_restaurant_finder';
 

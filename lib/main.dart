@@ -17,8 +17,6 @@ import 'screens/screen5.dart';
 import 'screens/screen6.dart';
 import 'screens/screen7.dart';
 import 'screens/screen8.dart';
-import 'screens/screen9.dart';
-import 'screens/screen10.dart';
 import 'screens/animation_screen1.dart';
 import 'screens/animation2/animation_screen2.dart';
 
@@ -34,15 +32,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // home: Screen0(), // Indica quale screen deve essere visualizzato per primo
+      // home: HomePage(), // Indica quale screen deve essere visualizzato per primo
       // all'avvio dell'app, ma possiamo indicare la prima schermata anche nel modo seguente:
-      initialRoute: 'homepage',
+      initialRoute: HomePage.id,
       // theme: ThemeData.dark(),
       
       theme: ThemeData.light(),
       routes: {
-        'homepage': (context) => HomePage(),
-        'screen1': (context) => Screen1(),
+        HomePage.id: (context) => HomePage(),
+        Screen1.id: (context) => Screen1(),
         'screen2': (context) => Screen2(),
         'screen3': (context) => Screen3(),
         'screen4': (context) => Screen4(),
@@ -50,8 +48,6 @@ class MyApp extends StatelessWidget {
         'screen6': (context) => Screen6(),
         'screen7': (context) => Screen7(),
         'screen8': (context) => Screen8(),
-        'screen9': (context) => Screen9(),
-        'screen10': (context) => Screen10(),
         'animation_screen1': (context) => AnimationScreen1(),
         'animation_screen2': (context) => AnimationScreen2(),
         'animation_screen3': (context) => AnimationScreen3(),
@@ -62,7 +58,7 @@ class MyApp extends StatelessWidget {
         LoginScreen.id: (context) => LoginScreen(),
         RegistrationScreen.id: (context) => RegistrationScreen(),
         ChatScreen.id: (context) => ChatScreen(),
-        RestaurantFinder.id: (context) => RestaurantFinder(),
+        MainRestaurantFinder.id: (context) => MainRestaurantFinder(),
       },
     );
   }

@@ -5,6 +5,8 @@ import 'chat/welcome_screen.dart';
 import 'screens/screen1.dart';
 
 class HomePage extends StatelessWidget {
+  static const String id = 'homepage';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +37,7 @@ class HomePage extends StatelessWidget {
                   text: 'Screen 1 (pushNamed)',
                   onTap: () {
                     // Navigate to Screen 1
-                    Navigator.pushNamed(context, 'screen1');
+                    Navigator.pushNamed(context, Screen1.id);
                   },
                 ),
                 SizedBox(
@@ -99,24 +101,6 @@ class HomePage extends StatelessWidget {
                   text: 'Screen 8',
                   onTap: () {
                     Navigator.pushNamed(context, 'screen8');
-                  },
-                ),
-                SizedBox(
-                  height: 12.0,
-                ),
-                CustomButton(
-                  text: 'Screen 9',
-                  onTap: () {
-                    Navigator.pushNamed(context, 'screen9');
-                  },
-                ),
-                SizedBox(
-                  height: 12.0,
-                ),
-                CustomButton(
-                  text: 'Screen 10',
-                  onTap: () {
-                    Navigator.pushNamed(context, 'screen10');
                   },
                 ),
                 SizedBox(
@@ -188,7 +172,7 @@ class HomePage extends StatelessWidget {
                 CustomButton(
                   text: 'Restaurant Finder',
                   onTap: () {
-                    Navigator.pushNamed(context, RestaurantFinder.id);
+                    Navigator.pushNamed(context, MainRestaurantFinder.id);
                   },
                 ),
                 SizedBox(

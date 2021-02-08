@@ -8,27 +8,102 @@ class Screen3 extends StatelessWidget {
       backgroundColor: Colors.teal,
       body: SafeArea(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/giovanni.jpg')),
+            Text(
+              'Giovanni Petito',
+              style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'FLUTTER DEVELOPER',
+              style: TextStyle(
+                fontFamily: 'Source Sans Pro',
+                fontSize: 20.0,
+                color: Colors.teal.shade100,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 2.5,
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+              width: 150.0,
+              child: Divider(
+                color: Colors.teal.shade100,
+              ),
+            ),
             Container(
-                height: 100.0,
-                width: 100.0,
-                margin: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(4.0),
                 color: Colors.white,
-                child: Center(child: Text('Container 1'))),
-            Container(
-                height: 100.0,
-                width: 100.0,
-                color: Colors.blue,
-                child: Center(child: Text('Container 2'))),
-            SizedBox(height: 10),
-            Container(
-                height: 100.0,
-                width: 100.0,
-                color: Colors.red,
-                child: Center(child: Text('Container 3'))),
-            Container(width: double.infinity, height: 0.0)
+              ),
+              padding: EdgeInsets.all(16.0),
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              child: Row(
+                children: <Widget>[
+                  Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                    size: 20.0,
+                  ),
+                  SizedBox(
+                    width: 34.0,
+                  ),
+                  Text(
+                    '3331582355 (Container)',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Card(
+              color: Colors.white,
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.phone,
+                  color: Colors.teal,
+                  size: 20.0,
+                ),
+                title: Text(
+                  '3331582355 (Card)',
+                  style: TextStyle(
+                    color: Colors.teal.shade900,
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 20.0,
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              color: Colors.white,
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.email,
+                  color: Colors.teal,
+                  size: 20.0,
+                ),
+                title: Text(
+                  'gi.petito@gmail.com',
+                  style: TextStyle(
+                    color: Colors.teal.shade900,
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 20.0,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

@@ -1,67 +1,41 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
+import 'package:audioplayers/audio_cache.dart';
 
-// stless
 class Screen5 extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
-      appBar: AppBar(
-        title: Text('Dicee'),
-        backgroundColor: Colors.red,
-      ),
-      body: DicePage(),
-    );
-  }
-}
-
-// stful
-class DicePage extends StatefulWidget {
-  @override
-  _DicePageState createState() => _DicePageState();
-}
-
-class _DicePageState extends State<DicePage> {
-
-  int leftDiceNumber = 1;
-  int rightDiceNumber = 1;
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Row(
-        children: <Widget>[
-          Expanded(
-            flex: 1,
-            child: FlatButton(
-              onPressed: () {
-                print('Left button got pressed: $leftDiceNumber');
-                changeDiceFace();
-              },
-              child: Image.asset('images/dice$leftDiceNumber.png'),
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: FlatButton(
-              onPressed: () {
-                print('Right button got pressed: $rightDiceNumber');
-                changeDiceFace();
-              },
-              child: Image.asset('images/dice$rightDiceNumber.png'),
-            ),
-          ),
-        ],
+      backgroundColor: Colors.black,
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            buildKey(color: Colors.red, soundNumber: 1),
+            buildKey(color: Colors.orange, soundNumber: 2),
+            buildKey(color: Colors.yellow, soundNumber: 3),
+            buildKey(color: Colors.green, soundNumber: 4),
+            buildKey(color: Colors.teal, soundNumber: 5),
+            buildKey(color: Colors.blue, soundNumber: 6),
+            buildKey(color: Colors.purple, soundNumber: 7),
+          ],
+        ),
       ),
     );
   }
 
-  void changeDiceFace() {
-    setState(() {
-      leftDiceNumber = Random().nextInt(6) + 1;
-      rightDiceNumber = Random().nextInt(6) + 1;
-    });
+  Expanded buildKey({Color color, int soundNumber}) {
+    return Expanded(
+      child: FlatButton(
+        color: color,
+        onPressed: () {
+          playSound(soundNumber);
+        },
+      ),
+    );
+  }
+
+  void playSound(int soundNumber) {
+    final player = AudioCache();
+    player.play('note$soundNumber.wav');
   }
 }

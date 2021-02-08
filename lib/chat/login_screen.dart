@@ -23,6 +23,11 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      /**
+       * resizeToAvoidBottomInset si usa per risolvere il problema di "BOTTOM OVERFLOWED" che si verifica quando appare la keyboard.
+       * resizeToAvoidBottomInset: false se la view non è contenuta all'interno del widget ListView (la view non scrolla).
+       * resizeToAvoidBottomInset: true se la view è contenuta all'interno del widget ListView (la view scrolla).
+       */
       resizeToAvoidBottomInset: true,
       backgroundColor: Colors.white,
       body: SafeArea(
