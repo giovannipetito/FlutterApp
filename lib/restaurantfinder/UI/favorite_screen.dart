@@ -15,10 +15,17 @@ class FavoriteScreen extends StatelessWidget {
       ),
       body: StreamBuilder<List<Restaurant>>(
         stream: bloc.favoritesStream,
-        // 1
+        /// 1)
+        /// Questo aggiunge alcuni dati iniziali a StreamBuilder. StreamBuilders
+        /// attiverà immediatamente la chiusura del builder, anche se non ci sono
+        /// dati. Invece di disegnare lo schermo inutilmente, questo consente a
+        /// Flutter di assicurarsi che lo snapshot contenga sempre dati.
         initialData: bloc.favorites,
         builder: (context, snapshot) {
-          // 2
+          /// 2)
+          /// Qui l'app controlla lo stato dello stream e, se non è ancora connesso,
+          /// utilizza l'elenco esplicito dei ristoranti preferiti invece di un
+          /// nuovo evento dallo stream.
           List<Restaurant> favorites =
               (snapshot.connectionState == ConnectionState.waiting)
                   ? bloc.favorites

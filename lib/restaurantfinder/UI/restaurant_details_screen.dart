@@ -71,7 +71,9 @@ class RestaurantDetailsScreen extends StatelessWidget {
     );
   }
 
-  // 1
+  /// 1)
+  /// Il widget utilizza lo stream dei preferiti per determinare se questo ristorante
+  /// è preferito e quindi esegue il rendering del widget appropriato.
   Widget _buildFavoriteButton(BuildContext context) {
     final bloc = BlocProvider.of<FavoriteBloc>(context);
     return StreamBuilder<List<Restaurant>>(
@@ -84,6 +86,10 @@ class RestaurantDetailsScreen extends StatelessWidget {
                 : snapshot.data;
         bool isFavorite = favorites.contains(restaurant);
 
+        /// 2)
+        /// La funzione toggleRestaurant in FavoriteBloc è scritta in modo che
+        /// la UI non ha bisogno di conoscere lo stato del ristorante.
+        /// Lo aggiunge solo se non è nell'elenco o lo rimuove se lo è.
         return FlatButton.icon(
           onPressed: () => bloc.toggleRestaurant(restaurant),
           textColor: isFavorite ? Theme.of(context).accentColor : null,

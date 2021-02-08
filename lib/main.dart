@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/bitcointicker/price_screen.dart';
-import 'package:flutter_app/restaurantfinder/UI/restaurant_finder.dart';
+import 'package:flutter_app/restaurantfinder/UI/main_restaurant_finder.dart';
+import 'package:flutter_app/screens/animation3/animation_screen3.dart';
+import 'package:flutter_app/screens/animation4/animation_screen4.dart';
 import 'package:flutter_app/screens/meteo/loading_screen.dart';
 import 'chat/chat_screen.dart';
 import 'chat/login_screen.dart';
@@ -17,7 +19,8 @@ import 'screens/screen7.dart';
 import 'screens/screen8.dart';
 import 'screens/screen9.dart';
 import 'screens/screen10.dart';
-import 'screens/screen11.dart';
+import 'screens/animation_screen1.dart';
+import 'screens/animation2/animation_screen2.dart';
 
 // The main function is the starting point for all our Flutter apps.
 void main() {
@@ -49,7 +52,10 @@ class MyApp extends StatelessWidget {
         'screen8': (context) => Screen8(),
         'screen9': (context) => Screen9(),
         'screen10': (context) => Screen10(),
-        'screen11': (context) => Screen11(),
+        'animation_screen1': (context) => AnimationScreen1(),
+        'animation_screen2': (context) => AnimationScreen2(),
+        'animation_screen3': (context) => AnimationScreen3(),
+        'animation_screen4': (context) => AnimationScreen4(),
         'meteo_screen': (context) => LoadingScreen(),
         'price_screen': (context) => PriceScreen(),
         WelcomeScreen.id: (context) => WelcomeScreen(),

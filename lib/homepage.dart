@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/components/custom_button.dart';
-import 'package:flutter_app/components/custom_text_field.dart';
-import 'package:flutter_app/restaurantfinder/UI/restaurant_finder.dart';
+import 'package:flutter_app/restaurantfinder/UI/main_restaurant_finder.dart';
 import 'chat/welcome_screen.dart';
 import 'screens/screen1.dart';
 
@@ -18,14 +17,6 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             Column(
               children: <Widget>[
-                SizedBox(
-                  height: 12.0,
-                ),
-                CustomTextField(hint: 'Username', icon: Icon(Icons.account_circle, color: Colors.lightBlueAccent,),),
-                SizedBox(
-                  height: 12.0,
-                ),
-                CustomTextField(hint: 'Password', icon: Icon(Icons.remove_red_eye_rounded, color: Colors.lightBlueAccent,),),
                 SizedBox(
                   height: 12.0,
                 ),
@@ -132,9 +123,36 @@ class HomePage extends StatelessWidget {
                   height: 12.0,
                 ),
                 CustomButton(
-                  text: 'Screen 11',
+                  text: 'Animation Screen 1',
                   onTap: () {
-                    Navigator.pushNamed(context, 'screen11');
+                    Navigator.pushNamed(context, 'animation_screen1');
+                  },
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
+                CustomButton(
+                  text: 'Animation Screen 2',
+                  onTap: () {
+                    Navigator.pushNamed(context, 'animation_screen2');
+                  },
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
+                CustomButton(
+                  text: 'Animation Screen 3',
+                  onTap: () {
+                    Navigator.pushNamed(context, 'animation_screen3');
+                  },
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
+                CustomButton(
+                  text: 'Animation Screen 4',
+                  onTap: () {
+                    Navigator.pushNamed(context, 'animation_screen4');
                   },
                 ),
                 SizedBox(

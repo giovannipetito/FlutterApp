@@ -7,6 +7,8 @@ import 'package:flutter_app/restaurantfinder/UI/favorite_screen.dart';
 import 'package:flutter_app/restaurantfinder/UI/location_screen.dart';
 import 'package:flutter_app/restaurantfinder/UI/restaurant_tile.dart';
 
+/// RestaurantScreen mostrerà un elenco di ristoranti in base a una query di ricerca.
+/// Avrà anche i propri oggetti BLoC per gestire lo stato.
 class RestaurantScreen extends StatelessWidget {
   final Location location;
 
