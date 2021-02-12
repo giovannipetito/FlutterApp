@@ -4,6 +4,7 @@ import 'package:flutter_app/restaurantfinder/UI/main_restaurant_finder.dart';
 import 'package:flutter_app/screens/animation3/animation_screen3.dart';
 import 'package:flutter_app/screens/animation4/animation_screen4.dart';
 import 'package:flutter_app/screens/meteo/loading_screen.dart';
+import 'package:flutter_app/screens/permissions_screen.dart';
 import 'chat/chat_screen.dart';
 import 'chat/login_screen.dart';
 import 'chat/registration_screen.dart';
@@ -21,12 +22,16 @@ import 'screens/animation_screen1.dart';
 import 'screens/animation2/animation_screen2.dart';
 
 // The main function is the starting point for all our Flutter apps.
-void main() {
-  runApp(MyApp());
-}
+// void main() {
+//   runApp(MyApp());
+// }
 
 // Oppure:
 // void main() => runApp(MyApp());
+
+Future <void> main() async {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -59,6 +64,7 @@ class MyApp extends StatelessWidget {
         RegistrationScreen.id: (context) => RegistrationScreen(),
         ChatScreen.id: (context) => ChatScreen(),
         MainRestaurantFinder.id: (context) => MainRestaurantFinder(),
+        PermissionsScreen.id: (context) => PermissionsScreen(),
       },
     );
   }

@@ -2,7 +2,8 @@ import 'dart:async';
 import 'package:flutter_app/restaurantfinder/DataLayer/location.dart';
 import 'bloc.dart';
 
-/// Questo Bloc si occupa della archiviazione e segnalazione delle locations.
+/// Questo BLoC è responsabile della gestione della location selezionata dell'app,
+/// in particolare si occupa della archiviazione e segnalazione delle locations.
 class LocationBloc implements Bloc {
 
   Location _location;
@@ -15,10 +16,6 @@ class LocationBloc implements Bloc {
   final _locationController = StreamController<Location>();
 
   /// 2)
-  /// Questa riga espone un getter pubblico al flusso (stream) di StreamController.
-  Stream<Location> get locationStream => _locationController.stream;
-
-  /// 3)
   /// Questa funzione rappresenta l'ingresso per il BLoC. Un oggetto del model Location
   /// verrà fornito come parametro che viene memorizzato nella cache nella proprietà
   /// _location privata dell'oggetto e quindi aggiunto al sink per lo stream.
@@ -26,6 +23,10 @@ class LocationBloc implements Bloc {
     _location = location;
     _locationController.sink.add(location);
   }
+
+  /// 3)
+  /// Questa riga espone un getter pubblico al flusso (stream) di StreamController.
+  Stream<Location> get locationStream => _locationController.stream;
 
   /// 4)
   /// Infine, nel metodo clean up, StreamController viene chiuso quando questo oggetto

@@ -18,7 +18,7 @@ class MainScreen extends StatelessWidget {
     return StreamBuilder<Location>(
 
       /// Per la property stream, utilizzare il metodo of per recuperare
-      /// LocationBloc e aggiungere il relativo flusso a questo StreamBuilder.
+      /// LocationBloc e aggiungere il relativo stream a questo StreamBuilder.
       stream: BlocProvider.of<LocationBloc>(context).locationStream,
       builder: (context, snapshot) {
         final location = snapshot.data;

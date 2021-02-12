@@ -13,7 +13,6 @@ class FavoriteBloc implements Bloc {
   /// solo una relazione uno a uno. Per la feature dei preferiti, l'app deve ascoltare
   /// lo streaming in due punti, quindi è necessaria la trasmissione (broadcast).
   final _controller = StreamController<List<Restaurant>>.broadcast();
-  Stream<List<Restaurant>> get favoritesStream => _controller.stream;
 
   void toggleRestaurant(Restaurant restaurant) {
     if (_restaurants.contains(restaurant)) {
@@ -24,6 +23,8 @@ class FavoriteBloc implements Bloc {
 
     _controller.sink.add(_restaurants);
   }
+
+  Stream<List<Restaurant>> get favoritesStream => _controller.stream;
 
   @override
   void dispose() {

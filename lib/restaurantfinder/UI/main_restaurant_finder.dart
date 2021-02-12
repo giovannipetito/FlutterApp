@@ -10,7 +10,7 @@ import 'main_screen.dart';
 /// momento di utilizzare il livello.
 /// Innanzitutto, in main.dart (o in questo caso, in main_restaurant_finder.dart),
 /// inserisci un BlocProvider di tipo LocationBloc e crea un LocationBloc nella
-/// property del bloc.
+/// property bloc.
 /// Tale LocationBloc (sopra MaterialApp) serve a memorizzare lo stato dell'app.
 /// L'aggiunta di widget sopra MaterialApp è un ottimo modo per aggiungere dati
 /// a cui è necessario accedere da più screens.

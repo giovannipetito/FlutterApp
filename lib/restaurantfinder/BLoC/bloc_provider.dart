@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'bloc.dart';
 
 /// Iniezione di BLoC nell'albero dei widget (Widget Tree)
-/// BlocProvider ha il compito di iniettare i bloc (LocationBloc, LocationQueryBloc, ecc...)
-/// nell'albero dei widget di Flutter. È diventata una convenzione Flutter chiamare questi
-/// tipi di fornitori (providers) di widget. Un provider è un widget che memorizza i dati e
-/// li "fornisce" a tutti i suoi figli.
+/// BlocProvider ha il compito di iniettare i bloc (LocationBloc, LocationQueryBloc,
+/// ecc...) nell'albero dei widget di Flutter. È diventata una convenzione Flutter
+/// chiamare questi tipi di fornitori (providers) di widget. Un provider è un widget
+/// che memorizza i dati e li "fornisce" a tutti i suoi figli.
 /// Normalmente questo sarebbe un lavoro per InheritedWidget, ma poiché i BLoC devono
 /// essere eliminati (col metodo dispose()), StatefulWidget fornirà lo stesso servizio.
 /// La sintassi è un po' più complessa, ma il risultato è lo stesso.

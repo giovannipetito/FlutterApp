@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/components/custom_button.dart';
 import 'package:flutter_app/restaurantfinder/UI/main_restaurant_finder.dart';
+import 'package:flutter_app/screens/permissions_screen.dart';
 import 'chat/welcome_screen.dart';
 import 'screens/screen1.dart';
 
@@ -173,6 +174,15 @@ class HomePage extends StatelessWidget {
                   text: 'Restaurant Finder',
                   onTap: () {
                     Navigator.pushNamed(context, MainRestaurantFinder.id);
+                  },
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
+                CustomButton(
+                  text: 'Permissions',
+                  onTap: () {
+                    Navigator.pushNamed(context, PermissionsScreen.id);
                   },
                 ),
                 SizedBox(

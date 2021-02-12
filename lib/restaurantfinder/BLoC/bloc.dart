@@ -1,4 +1,5 @@
 /// L'anatomia di un BLoC
+
 /// Il pattern BLoC è in realtà solo un'interfaccia per i flussi (streams) di Dart:
 /// Gli Streams, come i Futures, sono forniti dal pacchetto dart: async. Uno stream
 /// è come un Future, ma invece di restituire un singolo valore in modo asincrono,
@@ -15,10 +16,9 @@
 
 /// Tutte le tue classi BLoC saranno conformi a questa interfaccia. L'interfaccia
 /// non fa molto se non costringerti ad aggiungere il metodo dispose. Un piccolo
-/// avvertimento che deve essere tenuto presente con i flussi è che devono essere
-/// chiusi quando non sono più necessari, altrimenti può causare una perdita di
-/// memoria (memory leak). Il metodo di smaltimento è dove l'app verificherà questo.
-/// Il primo BLoC sarà responsabile della gestione della posizione selezionata dell'app.
+/// avvertimento che bisogna avere con gli streams è che devono essere chiusi
+/// quando non sono più necessari, altrimenti può causare una perdita di memoria
+/// (memory leak). Il metodo di smaltimento è dove l'app verificherà questo.
 
 abstract class Bloc {
   void dispose();

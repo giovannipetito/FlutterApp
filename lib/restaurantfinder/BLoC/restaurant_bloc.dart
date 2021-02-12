@@ -12,13 +12,14 @@ class RestaurantBloc implements Bloc {
   final _client = ZomatoClient();
   final _controller = StreamController<List<Restaurant>>();
 
-  Stream<List<Restaurant>> get stream => _controller.stream;
   RestaurantBloc(this.location);
 
   void submitQuery(String query) async {
     final results = await _client.fetchRestaurants(location, query);
     _controller.sink.add(results);
   }
+
+  Stream<List<Restaurant>> get stream => _controller.stream;
 
   @override
   void dispose() {
