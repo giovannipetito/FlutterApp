@@ -3,6 +3,7 @@ import 'package:flutter_app/bitcointicker/price_screen.dart';
 import 'package:flutter_app/restaurantfinder/UI/main_restaurant_finder.dart';
 import 'package:flutter_app/screens/animation3/animation_screen3.dart';
 import 'package:flutter_app/screens/animation4/animation_screen4.dart';
+import 'package:flutter_app/screens/battery_level_screen.dart';
 import 'package:flutter_app/screens/meteo/loading_screen.dart';
 import 'package:flutter_app/screens/permissions_screen.dart';
 import 'chat/chat_screen.dart';
@@ -65,6 +66,7 @@ class MyApp extends StatelessWidget {
         ChatScreen.id: (context) => ChatScreen(),
         MainRestaurantFinder.id: (context) => MainRestaurantFinder(),
         PermissionsScreen.id: (context) => PermissionsScreen(),
+        BatteryLevelScreen.id: (context) => BatteryLevelScreen(),
       },
     );
   }
