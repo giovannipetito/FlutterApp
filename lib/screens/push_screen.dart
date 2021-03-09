@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/components/custom_button.dart';
 
-class Screen1 extends StatefulWidget {
-  static const String id = 'screen1';
+class PushScreen extends StatefulWidget {
+
+  static const String id = 'push_screen';
 
   @override
-  _Screen1State createState() => _Screen1State();
+  _PushScreenState createState() => _PushScreenState();
 }
 
-class _Screen1State extends State<Screen1> {
+class _PushScreenState extends State<PushScreen> {
   @override
   void initState() {
     super.initState();
@@ -28,14 +29,18 @@ class _Screen1State extends State<Screen1> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: Text('Screen 1'),
+        title: Text('Push Screen'),
       ),
+      backgroundColor: Colors.black,
       body: Center(
-        child: CustomButton(
-          text: 'Go back',
-          onTap: () {
-            Navigator.pop(context);
-          },
+        child: Expanded(
+          child: CustomButton(
+            text: 'Go back',
+            darkMode: true,
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
         ),
       ),
     );

@@ -7,6 +7,13 @@ const kCustomButtonTextStyle = TextStyle(
   fontFamily: 'Source Sans Pro',
 );
 
+const kCustomButtonDarkModeTextStyle = TextStyle(
+  fontSize: 16.0,
+  color: Colors.black,
+  fontWeight: FontWeight.bold,
+  fontFamily: 'Source Sans Pro',
+);
+
 const kLabelTextStyle = TextStyle(
     fontSize: 12.0,
     color: Color(0xFF8D8E98)

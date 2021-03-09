@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'input_page.dart';
+import 'bmi_input_screen.dart';
 
-class Screen7 extends StatelessWidget {
+class BMIMainScreen extends StatelessWidget {
+
+  static const String id = 'bmi_main_screen';
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class Screen7 extends StatelessWidget {
           bodyText1: TextStyle(color: Color(0xFFFFFFFF)), // Oppure: Colors.white
         ),
       ),
-      home: InputPage(),
+      home: BMIInputScreen(),
     );
   }
 }

@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/components/custom_text_field.dart';
 import 'package:flutter_app/components/facebook_button.dart';
 
-class Screen8 extends StatelessWidget {
+class CustomButtonsScreen extends StatelessWidget {
+
+  static const String id = 'custom_buttons_screen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

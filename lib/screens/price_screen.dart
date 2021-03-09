@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_app/bitcointicker/coin_data.dart';
+import 'package:flutter_app/values/constants.dart';
 import 'dart:io' show Platform;
 
 class PriceScreen extends StatefulWidget {
+
+  static const String id = 'price_screen';
+
   @override
   _PriceScreenState createState() => _PriceScreenState();
 }

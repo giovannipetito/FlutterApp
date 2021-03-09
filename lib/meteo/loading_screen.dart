@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/meteo/location_screen.dart';
-import 'package:flutter_app/services/weather.dart';
+import 'package:flutter_app/meteo/location_screen.dart';
+import 'package:flutter_app/meteo/services/weather_model.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class LoadingScreen extends StatefulWidget {
+
+  static const String id = 'loading_screen';
+
   @override
   _LoadingScreenState createState() => _LoadingScreenState();
 }

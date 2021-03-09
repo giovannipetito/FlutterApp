@@ -3,13 +3,15 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter_app/chat/login_screen.dart';
 
-class AnimationScreen1 extends StatefulWidget {
+class AnimationsScreen extends StatefulWidget {
+
+  static const String id = 'animations_screen';
 
   @override
-  _AnimationScreen1State createState() => _AnimationScreen1State();
+  _AnimationsScreenState createState() => _AnimationsScreenState();
 }
 
-class _AnimationScreen1State extends State<AnimationScreen1>
+class _AnimationsScreenState extends State<AnimationsScreen>
     with TickerProviderStateMixin {
   // NOTA: with SingleTickerProviderStateMixin per le animazioni singole.
   // NOTA: with TickerProviderStateMixin per le animazioni multiple.

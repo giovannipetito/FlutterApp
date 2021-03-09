@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/bmi_calculator/bmi_main_screen.dart';
 import 'package:flutter_app/components/custom_button.dart';
+import 'package:flutter_app/meteo/loading_screen.dart';
 import 'package:flutter_app/restaurantfinder/UI/main_restaurant_finder.dart';
+import 'package:flutter_app/screens/animations_screen.dart';
 import 'package:flutter_app/screens/battery_level_screen.dart';
+import 'package:flutter_app/screens/dice_screen.dart';
 import 'package:flutter_app/screens/permissions_screen.dart';
+import 'package:flutter_app/screens/price_screen.dart';
+import 'package:flutter_app/quiz/quiz_screen.dart';
+import 'package:flutter_app/screens/screen_3.dart';
+import 'package:flutter_app/screens/custom_buttons_screen.dart';
+import 'package:flutter_app/screens/snakebar_screen.dart';
+import 'package:flutter_app/screens/xylophone_screen.dart';
 import 'chat/welcome_screen.dart';
-import 'screens/screen1.dart';
+import 'screens/push_screen.dart';
+import 'screens/screen_2.dart';
 
 class HomePage extends StatelessWidget {
   static const String id = 'homepage';
@@ -25,10 +36,10 @@ class HomePage extends StatelessWidget {
                   height: 12.0,
                 ),
                 CustomButton(
-                  text: 'Screen 1 (push)',
+                  text: 'push/pop',
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return Screen1();
+                      return PushScreen();
                     }));
                   },
                 ),
@@ -36,10 +47,10 @@ class HomePage extends StatelessWidget {
                   height: 12.0,
                 ),
                 CustomButton(
-                  text: 'Screen 1 (pushNamed)',
+                  text: 'pushNamed/pop',
                   onTap: () {
                     // Navigate to Screen 1
-                    Navigator.pushNamed(context, Screen1.id);
+                    Navigator.pushNamed(context, PushScreen.id);
                   },
                 ),
                 SizedBox(
@@ -48,7 +59,7 @@ class HomePage extends StatelessWidget {
                 CustomButton(
                   text: 'Screen 2',
                   onTap: () {
-                    Navigator.pushNamed(context, 'screen2');
+                    Navigator.pushNamed(context, Screen2.id);
                   },
                 ),
                 SizedBox(
@@ -57,88 +68,70 @@ class HomePage extends StatelessWidget {
                 CustomButton(
                   text: 'Screen 3',
                   onTap: () {
-                    Navigator.pushNamed(context, 'screen3');
+                    Navigator.pushNamed(context, Screen3.id);
                   },
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 CustomButton(
-                  text: 'Screen 4',
+                  text: 'Dice Screen',
                   onTap: () {
-                    Navigator.pushNamed(context, 'screen4');
+                    Navigator.pushNamed(context, DiceScreen.id);
                   },
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 CustomButton(
-                  text: 'Screen 5',
+                  text: 'Xylophone',
                   onTap: () {
-                    Navigator.pushNamed(context, 'screen5');
+                    Navigator.pushNamed(context, XylophoneScreen.id);
                   },
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 CustomButton(
-                  text: 'Screen 6',
+                  text: 'Quiz',
                   onTap: () {
-                    Navigator.pushNamed(context, 'screen6');
+                    Navigator.pushNamed(context, QuizScreen.id);
                   },
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 CustomButton(
-                  text: 'Screen 7',
+                  text: 'BMI Calculator',
                   onTap: () {
-                    Navigator.pushNamed(context, 'screen7');
+                    Navigator.pushNamed(context, BMIMainScreen.id);
                   },
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 CustomButton(
-                  text: 'Screen 8',
+                  text: 'Custom Buttons',
                   onTap: () {
-                    Navigator.pushNamed(context, 'screen8');
+                    Navigator.pushNamed(context, CustomButtonsScreen.id);
                   },
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 CustomButton(
-                  text: 'Animation Screen 1',
+                  text: 'Animations',
                   onTap: () {
-                    Navigator.pushNamed(context, 'animation_screen1');
+                    Navigator.pushNamed(context, AnimationsScreen.id);
                   },
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 CustomButton(
-                  text: 'Animation Screen 2',
+                  text: 'SnakeBar',
                   onTap: () {
-                    Navigator.pushNamed(context, 'animation_screen2');
-                  },
-                ),
-                SizedBox(
-                  height: 12.0,
-                ),
-                CustomButton(
-                  text: 'Animation Screen 3',
-                  onTap: () {
-                    Navigator.pushNamed(context, 'animation_screen3');
-                  },
-                ),
-                SizedBox(
-                  height: 12.0,
-                ),
-                CustomButton(
-                  text: 'Animation Screen 4',
-                  onTap: () {
-                    Navigator.pushNamed(context, 'animation_screen4');
+                    Navigator.pushNamed(context, SnakeBarScreen.id);
                   },
                 ),
                 SizedBox(
@@ -147,7 +140,7 @@ class HomePage extends StatelessWidget {
                 CustomButton(
                   text: 'Meteo',
                   onTap: () {
-                    Navigator.pushNamed(context, 'meteo_screen');
+                    Navigator.pushNamed(context, LoadingScreen.id);
                   },
                 ),
                 SizedBox(
@@ -156,7 +149,7 @@ class HomePage extends StatelessWidget {
                 CustomButton(
                   text: 'Bitcoin Ticker',
                   onTap: () {
-                    Navigator.pushNamed(context, 'price_screen');
+                    Navigator.pushNamed(context, PriceScreen.id);
                   },
                 ),
                 SizedBox(

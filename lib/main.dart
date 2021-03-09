@@ -1,26 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/bitcointicker/price_screen.dart';
+import 'package:flutter_app/bmi_calculator/bmi_main_screen.dart';
+import 'package:flutter_app/meteo/loading_screen.dart';
+import 'package:flutter_app/screens/price_screen.dart';
 import 'package:flutter_app/restaurantfinder/UI/main_restaurant_finder.dart';
-import 'package:flutter_app/screens/animation3/animation_screen3.dart';
-import 'package:flutter_app/screens/animation4/animation_screen4.dart';
+import 'package:flutter_app/screens/snakebar_screen.dart';
 import 'package:flutter_app/screens/battery_level_screen.dart';
-import 'package:flutter_app/screens/meteo/loading_screen.dart';
 import 'package:flutter_app/screens/permissions_screen.dart';
 import 'chat/chat_screen.dart';
 import 'chat/login_screen.dart';
 import 'chat/registration_screen.dart';
 import 'chat/welcome_screen.dart';
 import 'homepage.dart';
-import 'screens/screen1.dart';
-import 'screens/screen2.dart';
-import 'screens/screen3.dart';
-import 'screens/screen4.dart';
-import 'screens/screen5.dart';
-import 'screens/screen6.dart';
-import 'screens/screen7.dart';
-import 'screens/screen8.dart';
-import 'screens/animation_screen1.dart';
-import 'screens/animation2/animation_screen2.dart';
+import 'screens/push_screen.dart';
+import 'screens/screen_2.dart';
+import 'screens/screen_3.dart';
+import 'screens/dice_screen.dart';
+import 'screens/xylophone_screen.dart';
+import 'quiz/quiz_screen.dart';
+import 'screens/custom_buttons_screen.dart';
+import 'screens/animations_screen.dart';
 
 // The main function is the starting point for all our Flutter apps.
 // void main() {
@@ -46,20 +44,18 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light(),
       routes: {
         HomePage.id: (context) => HomePage(),
-        Screen1.id: (context) => Screen1(),
-        'screen2': (context) => Screen2(),
-        'screen3': (context) => Screen3(),
-        'screen4': (context) => Screen4(),
-        'screen5': (context) => Screen5(),
-        'screen6': (context) => Screen6(),
-        'screen7': (context) => Screen7(),
-        'screen8': (context) => Screen8(),
-        'animation_screen1': (context) => AnimationScreen1(),
-        'animation_screen2': (context) => AnimationScreen2(),
-        'animation_screen3': (context) => AnimationScreen3(),
-        'animation_screen4': (context) => AnimationScreen4(),
-        'meteo_screen': (context) => LoadingScreen(),
-        'price_screen': (context) => PriceScreen(),
+        PushScreen.id: (context) => PushScreen(),
+        Screen2.id: (context) => Screen2(),
+        Screen3.id: (context) => Screen3(),
+        DiceScreen.id: (context) => DiceScreen(),
+        XylophoneScreen.id: (context) => XylophoneScreen(),
+        QuizScreen.id: (context) => QuizScreen(),
+        BMIMainScreen.id: (context) => BMIMainScreen(),
+        CustomButtonsScreen.id: (context) => CustomButtonsScreen(),
+        AnimationsScreen.id: (context) => AnimationsScreen(),
+        SnakeBarScreen.id: (context) => SnakeBarScreen(),
+        LoadingScreen.id: (context) => LoadingScreen(),
+        PriceScreen.id: (context) => PriceScreen(),
         WelcomeScreen.id: (context) => WelcomeScreen(),
         LoginScreen.id: (context) => LoginScreen(),
         RegistrationScreen.id: (context) => RegistrationScreen(),

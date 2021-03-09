@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/quiz_brain.dart';
+import 'package:flutter_app/quiz/quiz_manager.dart';
 
-class Screen6 extends StatelessWidget {
+class QuizScreen extends StatelessWidget {
+
+  static const String id = 'quiz_screen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +19,7 @@ class Screen6 extends StatelessWidget {
   }
 }
 
-QuizBrain quizBrain = QuizBrain();
+QuizManager quizBrain = QuizManager();
 
 class QuizPage extends StatefulWidget {
   @override

@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/components/custom_button.dart';
+import 'package:flutter_app/components/icon_content.dart';
+import 'package:flutter_app/components/reusable_card.dart';
+import 'package:flutter_app/components/round_icon_button.dart';
+import 'package:flutter_app/values/colors.dart';
+import 'package:flutter_app/values/styles.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:flutter_app/calculator_brain.dart';
-import '../components/reusable_card.dart';
-import '../components/icon_content.dart';
-import '../values/styles.dart';
-import '../values/colors.dart';
-import 'results_page.dart';
-import '../components/custom_button.dart';
-import '../components/round_icon_button.dart';
+import 'package:flutter_app/bmi_calculator/calculator.dart';
+import 'bmi_result_screen.dart';
 
 enum Gender {
   male,
   female,
 }
 
-class InputPage extends StatefulWidget {
+class BMIInputScreen extends StatefulWidget {
   @override
-  _InputPageState createState() => _InputPageState();
+  _BMIInputScreenState createState() => _BMIInputScreenState();
 }
 
-class _InputPageState extends State<InputPage> {
+class _BMIInputScreenState extends State<BMIInputScreen> {
   Gender selectedGender;
   int height = 180;
   int weight = 60;
@@ -205,21 +205,28 @@ class _InputPageState extends State<InputPage> {
           )),
           CustomButton(
             text: 'CALCULATE',
+            darkMode: true,
             onTap: () {
-              CalculatorBrain calculator = CalculatorBrain(height: height,weight: weight);
+              CalculatorBrain calculator =
+                  CalculatorBrain(height: height, weight: weight);
               /*
               Navigator.push(context, MaterialPageRoute(builder: (context) {
               return ResultsPage();
               );
               */
               // Oppure:
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ResultsPage(
-                    bmiResult: calculator.calculateBMI(),
-                    resultText: calculator.getResult(),
-                    interpretation: calculator.getInterpretation(),
-                  )));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => BMIResultScreen(
+                            bmiResult: calculator.calculateBMI(),
+                            resultText: calculator.getResult(),
+                            interpretation: calculator.getInterpretation(),
+                          )));
             },
+          ),
+          SizedBox(
+            height: 12.0,
           ),
         ],
       ),

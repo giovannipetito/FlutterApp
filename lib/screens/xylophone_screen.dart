@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
 
-class Screen5 extends StatelessWidget {
+class XylophoneScreen extends StatelessWidget {
+
+  static const String id = 'xylophone_screen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

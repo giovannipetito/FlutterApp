@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
 
-class AnimationScreen4 extends StatelessWidget {
+class SnakeBarScreen extends StatelessWidget {
+
+  static const String id = 'snakebar_screen';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

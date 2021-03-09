@@ -1,7 +1,7 @@
 import 'question.dart';
 import 'package:flutter_app/values/strings.dart';
 
-class QuizBrain {
+class QuizManager {
 
   int _questionNumber = 0;
 

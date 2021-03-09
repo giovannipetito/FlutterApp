@@ -1,5 +1,6 @@
-import 'package:flutter_app/screens/meteo/location.dart';
-import 'package:flutter_app/services/networking.dart';
+
+import 'package:flutter_app/meteo/location.dart';
+import 'package:flutter_app/meteo/services/network_helper.dart';
 
 const apiKey = 'e23adc82f7f5e4943cc4ac26806ccbb5';
 const openWeatherMapURL = 'https://api.openweathermap.org/data/2.5/weather';

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 class Screen2 extends StatelessWidget {
 
+  static const String id = 'screen_2';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
