@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../values/styles.dart';
-import '../values/dimens.dart';
-import '../values/colors.dart';
+import 'package:flutter_app/values/colors.dart';
+import 'package:flutter_app/values/dimens.dart';
+import 'package:flutter_app/values/styles.dart';
 
 class CustomButton extends StatelessWidget {
 
@@ -39,19 +39,19 @@ class CustomButton extends StatelessWidget {
                 width: 2,
                 style: BorderStyle.solid),
           ),
-          color: darkMode ? kCustomButtonEmptyColor : kCustomButtonColor,
+          color: darkMode ? kDarkModeButtonColor : kButtonColor,
           borderRadius: BorderRadius.circular(24.0),
         ),
         child: Center(
           child: Text(
             text.toUpperCase(),
-            style: darkMode ? kCustomButtonDarkModeTextStyle : kCustomButtonTextStyle,
+            style: darkMode ? kDarkModeButtonTextStyle : kButtonTextStyle,
           ),
         ),
         margin: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 0.0),
         padding: EdgeInsets.all(12.0),
         width: double.infinity,
-        height: kCustomButtonHeight,
+        height: kButtonHeight,
       ),
     );
   }

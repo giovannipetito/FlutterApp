@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-const kCustomButtonTextStyle = TextStyle(
+const kButtonTextStyle = TextStyle(
   fontSize: 16.0,
   color: Colors.white,
   fontWeight: FontWeight.bold,
   fontFamily: 'Source Sans Pro',
 );
 
-const kCustomButtonDarkModeTextStyle = TextStyle(
+const kDarkModeButtonTextStyle = TextStyle(
   fontSize: 16.0,
   color: Colors.black,
   fontWeight: FontWeight.bold,
@@ -61,11 +61,6 @@ const kTempTextStyle = TextStyle(
 const kMessageTextStyle = TextStyle(
   fontFamily: 'Spartan MB',
   fontSize: 60.0,
-);
-
-const kButtonTextStyle = TextStyle(
-  fontSize: 30.0,
-  fontFamily: 'Spartan MB',
 );
 
 const kConditionTextStyle = TextStyle(
