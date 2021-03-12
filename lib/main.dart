@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter_app/bmi_calculator/bmi_main_screen.dart';
+import 'package:flutter_app/fcm/fcm_screen.dart';
 import 'package:flutter_app/meteo/loading_screen.dart';
 import 'package:flutter_app/screens/price_screen.dart';
 import 'package:flutter_app/restaurantfinder/UI/main_restaurant_finder.dart';
@@ -99,6 +100,7 @@ class _MyAppState extends State<MyApp> {
         MainRestaurantFinder.id: (context) => MainRestaurantFinder(),
         PermissionsScreen.id: (context) => PermissionsScreen(),
         BatteryLevelScreen.id: (context) => BatteryLevelScreen(),
+        FCMScreen.id: (context) => FCMScreen(),
       },
     );
   }

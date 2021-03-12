@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/bmi_calculator/bmi_main_screen.dart';
 import 'package:flutter_app/components/custom_button.dart';
+import 'package:flutter_app/fcm/fcm_screen.dart';
 import 'package:flutter_app/meteo/loading_screen.dart';
 import 'package:flutter_app/restaurantfinder/UI/main_restaurant_finder.dart';
 import 'package:flutter_app/screens/animations_screen.dart';
@@ -186,6 +187,15 @@ class HomePage extends StatelessWidget {
                   text: 'Battery level',
                   onTap: () {
                     Navigator.pushNamed(context, BatteryLevelScreen.id);
+                  },
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
+                CustomButton(
+                  text: 'Firebase Cloud Messages',
+                  onTap: () {
+                    Navigator.pushNamed(context, FCMScreen.id);
                   },
                 ),
                 SizedBox(
